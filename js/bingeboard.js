@@ -8,7 +8,11 @@ $(function() {
 });
 
 function pollBingeBoard() {
-    $.get('https://binge.csh.rit.edu/api/get/10?filter_complete', function(data) {
+    var uri = 'https://binge.csh.rit.edu/api/get/10';
+    if (document.querySelector('#allGames').checked) {
+        uri += '?filter_complete';
+    }
+    $.get(uri, function(data) {
         // Clear table rows
         $('#bingeboard').find('tbody').empty();
 
