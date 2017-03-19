@@ -5,7 +5,6 @@ $(function() {
         data_fields.push($(element).data('field'));
     });
     pollBingeBoard();
-    console.log(data_fields);
 });
 
 function pollBingeBoard() {
