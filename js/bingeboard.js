@@ -16,7 +16,7 @@ function pollBingeBoard() {
         for(var i = 0; i < data.length; i++) {
             var tableRow = $('#bingeboard').find('tbody').append($('<tr>'));
             for(var j = 0; j < data_fields.length; j++) {
-                tableRow.append($('<td>').text(data[i][data_fields[j])
+                tableRow.append($('<td>').text(data[i][data_fields[j]));
             }
         }
     });
