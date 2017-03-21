@@ -5,6 +5,7 @@ $(function() {
         data_fields.push($(element).data('field'));
     });
     document.querySelector('#allGames').onchange = getBingeData;
+    document.querySelector('#numGames').onchange = getBingeData;
     pollBingeBoard();
 });
 
@@ -14,7 +15,8 @@ function pollBingeBoard() {
 }
 
 function getBingeData() {
-    var uri = 'https://binge.csh.rit.edu/api/get/10';
+    var uri = 'https://binge.csh.rit.edu/api/get/';
+    uri += document.querySelector('#numGames').value;
     if (document.querySelector('#allGames').checked) {
         uri += '?filter_complete';
     }
