@@ -4,10 +4,16 @@ $(function() {
     $('#bingeboard').find('thead').find('tr').children('td').each(function (i, element) {
         data_fields.push($(element).data('field'));
     });
+    document.querySelector('#allGames').onchange = getBingeData;
     pollBingeBoard();
 });
 
 function pollBingeBoard() {
+    getBingeData();
+    setTimeout(pollBingeBoard, 5000);
+}
+
+function getBingeData() {
     var uri = 'https://binge.csh.rit.edu/api/get/10';
     if (document.querySelector('#allGames').checked) {
         uri += '?filter_complete';
@@ -23,5 +29,4 @@ function pollBingeBoard() {
             }
         }
     });
-    setTimeout(pollBingeBoard, 5000);
 }
