@@ -3,6 +3,14 @@
     <head>
         <meta charset="utf-8">
         <title>Bingehack4 Bingeboard</title>
+        <style>
+        body{
+          font-family: monospace;
+        }
+        td {
+          padding-left: 8px;
+        }
+        </style>
     </head>
     <body>
         <p>A table of Bingehack current sessions will display here.</p>
@@ -14,35 +22,37 @@
             <label for="numGames">Game Count: </label>
             <input id="numGames" type="number" min="1" max="100" value="10"/>
         </div>
-        <table id="bingeboard">
-            <thead>
-                <tr>
+        <div class="grey">
+          <table id="bingeboard">
+              <thead>
+                  <tr>
+                    <td data-field="username">Account Name</td>
                     <td data-field="character_name">Character Name</td>
-                    <td data-field="score">Score</td>
-                    <td data-field="gold">Gold</td>
+                    <td data-field="alignment">Alignment</td>
+                    <td data-field="race">Race</td>
+                    <td data-field="gender">Gender</td>
+                    <td data-field="role">Role</td>
                     <td data-field="hp">HP</td>
                     <td data-field="max_hp">Max. HP</td>
-                    <td data-field="alignment">Alignment</td>
-                    <td data-field="charisma">Charisma</td>
-                    <td data-field="constitution">Constitution</td>
-                    <td data-field="depth">Level Depth</td>
-                    <td data-field="dexterity">Dexterity</td>
                     <td data-field="energy">Energy</td>
                     <td data-field="max_energy">Max. Energy</td>
-                    <td data-field="gender">Gender</td>
-                    <td data-field="intelligence">Intelligence</td>
-                    <td data-field="moves">Moves</td>
-                    <td data-field="race">Race</td>
-                    <td data-field="role">Role</td>
                     <td data-field="strength">Strength</td>
+                    <td data-field="dexterity">Dexterity</td>
+                    <td data-field="constitution">Constitution</td>
+                    <td data-field="intelligence">Intelligence</td>
                     <td data-field="wisdom">Wisdom</td>
-                    <td data-field="username">Account Name</td>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+                    <td data-field="charisma">Charisma</td>
+                    <td data-field="depth">Level Depth</td>
+                    <td data-field="moves">Moves</td>
+                    <td data-field="gold">Gold</td>
+                    <td data-field="score">Score</td>
+                  </tr>
+              </thead>
+              <tbody>
+              </tbody>
+          </table>
+        </div>
     </body>
-    <script src="/js/jquery-3.2.0.min.js"></script>
-    <script src="/js/bingeboard.js"></script>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/bingeboard.js"></script>
 </html>
